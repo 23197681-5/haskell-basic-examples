@@ -1,9 +1,10 @@
 
 classificaIMC p a
-	| (calculaIMC p a) < 18.5 = "magro"
-	| (calculaIMC p a) < 25 = "normal"
-	| (calculaIMC p a) < 30 = "sobrepeso"
+	| imc < 18.5 = "magro"
+	| imc < 25 = "normal"
+	| imc < 30 = "sobrepeso"
 	| otherwise = "obeso"
+	where imc = p/(a^2)
 
 calculaIMC peso altura
    = peso / (altura * altura)  
